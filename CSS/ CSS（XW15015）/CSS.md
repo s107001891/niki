@@ -50,9 +50,32 @@ text-transform: capitalize; /*設定整段英文,單字開頭大寫*/
 ```
 ## 1.4  文字對齊
 ```
+text-align:left;            /*向左對齊*/
+
+text-align:right;           /*向右對齊*/
+
+text-align:center;          /*置中對齊*/
+
+line-height:20px;           /*文字行高*/
 ```
 ## 1.5  調整文字、字元的間距
 ```
+word-spacing: 5px;          /*設定空格長度*/
+
+letter-spacing:10px;        /*設定文字間距*/
+
+line-height: 0.3;           /*設定行高*/
+
+white-space: normal;        /*預設,連續的空白字元會被合併(collapse),換行字元被視為空白字元,換行只在被文字空間限制時發生*/
+
+white-space: nowrap;        /*對待空白字元的方式跟 normal 一樣,且會強制不換行*/
+
+white-space: pre;           /*連續的空白字元都會被保留,換行在有換行字元以及<br>時發生*/
+
+white-space: pre-wrap;      /*連續的空白字元都會被保留,換行會在換行字元,有<br>元素以及被文字空間限制時發生*/
+
+white-space: pre-line;      /*連續的空白字元會被合併(collapse),換行在換行字元, <br>以及被文字空間限制時發生*/
+
 ```
 ## 1.6  文字樣式：畫線、粗體、斜體
 ```
