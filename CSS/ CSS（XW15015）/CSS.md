@@ -31,6 +31,7 @@ float: left;              /*浮動排列*/
 .p:first-letter           /*設定每一段第一個文字*/
 { 
 float: left;              /*讓字元產生下沉效果*/
+
 }
 ```
 
