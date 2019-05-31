@@ -150,6 +150,12 @@ text-indent:-9999px;                            /*段落縮排*/
 margin: 0 auto; width: 490px;height: 200px;     /*置中對齊*/  
 background: url("img/123.jpg") no-repeat;       /*背景圖片*/
 }
+
+.screen-reader-text {
+position: absolute;                             /*絕對定位*/
+top: -9999px;                                   /*頂部位置點*/
+left: -9999px;                                  /*左側位置點*/
+}
 ```
 ## 1.12 文字旋轉
 ```
