@@ -132,6 +132,16 @@ text-overflow: ellipsis;             /*使用省略符號*/
 ```
 ## 1.10 金屬質感的文字
 ```
+p {
+    color:white;background:black;
+    font-weight:bold;font-size:30px;
+    position:relative;                                                        /*先對p定位,才能對浮動層進行絕對定位*/
+}
+span.cover {
+    width:100%;height:100%;position:absolute;                                 /*浮動漸層位置*/
+    background:linear-gradient(to bottom, black 0%, transparent 50%, black);
+    opacity:0.5;                                                              /*設定透明度*/
+}
 ```
 ## 1.11 隱藏文字內容
 ```
