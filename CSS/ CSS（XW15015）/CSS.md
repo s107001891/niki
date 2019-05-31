@@ -31,8 +31,14 @@ float: left;              /*浮動排列*/
 .p:first-letter           /*設定每一段第一個文字*/
 { 
 float: left;              /*讓字元產生下沉效果*/
-
+text-transform: uppercase;/*設定第一個英文字母大寫*/
 }
+
+text-transform: uppercase;/*設定整段英文字母大寫*/
+
+text-transform: lowercase;/*設定整段英文字母小寫*/
+
+text-transform: capitalize/*設定整段英文,單字開頭大寫*/
 ```
 
 ## 1.3  自訂文字內容被選取的樣式
