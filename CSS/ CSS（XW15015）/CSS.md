@@ -145,6 +145,11 @@ span.cover {
 ```
 ## 1.11 隱藏文字內容
 ```
+h1{
+text-indent:-9999px;                            /*段落縮排*/
+margin: 0 auto; width: 490px;height: 200px;     /*置中對齊*/  
+background: url("img/123.jpg") no-repeat;       /*背景圖片*/
+}
 ```
 ## 1.12 文字旋轉
 ```
