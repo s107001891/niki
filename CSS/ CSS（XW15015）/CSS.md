@@ -20,13 +20,18 @@ text-indent: -6px;        /*調整文字凸排*/
 
 text-indent: 0.5em;       /*使用em作為單位,調整文字縮排*/
 
-float: left;              /*使用浮動,讓字元產生下沉效果*/
-
 color: #B23AEE;           /*使用顏色代碼設定顏色*/
 
 color: red;               /*使用顏色名字設定顏色*/
 
+color:rgb(0,0,255);       /*使用rgb座標設定顏色*/
 
+float: left;
+
+p:first-letter            /*設定每一段第一個文字*/
+{ 
+float: left;              /*使用浮動,讓字元產生下沉效果,浮動排列*/
+}
 ```
 
 ## 1.3  自訂文字內容被選取的樣式
