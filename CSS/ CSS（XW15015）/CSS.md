@@ -10,7 +10,6 @@ src:url('xujinglei.ttf')  /*字形在網頁伺服器中的路徑*/
 ,url('xujinglei.eot');    /*IE 9+*/
 
 font-size: 18px;          /*設定字型大小*/
-
 ```
 
 ## 1.2  文字縮排、凸排與首字下沉
@@ -20,4 +19,9 @@ text-indent: 15px;        /*使用像素作為單位,調整文字縮排*/
 text-indent: -6px;        /*調整文字凸排*/
 
 text-indent: 0.5em;       /*使用em作為單位,調整文字縮排*/
+```
+
+## 1.3  自訂文字內容被選取的樣式
+```
+
 ```
