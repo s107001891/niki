@@ -17,4 +17,7 @@ font-size: 18px;          /*設定字型大小*/
 ```
 text-indent: 15px;        /*使用像素作為單位,調整文字縮排*/
 
+text-indent: -6px;        /*調整文字凸排*/
+
+text-indent: 0.5em;       /*使用em作為單位,調整文字縮排*/
 ```
