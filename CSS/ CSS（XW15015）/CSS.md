@@ -26,11 +26,11 @@ color: red;               /*使用顏色名字設定顏色*/
 
 color:rgb(0,0,255);       /*使用rgb座標設定顏色*/
 
-float: left;
+float: left;              /*浮動排列*/
 
-p:first-letter            /*設定每一段第一個文字*/
+.p:first-letter           /*設定每一段第一個文字*/
 { 
-float: left;              /*使用浮動,讓字元產生下沉效果,浮動排列*/
+float: left;              /*讓字元產生下沉效果*/
 }
 ```
 
