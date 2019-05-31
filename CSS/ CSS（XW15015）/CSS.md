@@ -79,6 +79,20 @@ white-space: pre-line;      /*連續的空白字元會被合併(collapse),換行
 ```
 ## 1.6  文字樣式：畫線、粗體、斜體
 ```
+text-decoration: underline;     /*底線*/
+
+text-decoration: overline;      /*頂線*/
+
+text-decoration: line-through;  /*刪除線*/
+
+text-decoration: blink;         /*文字閃爍,暫不支援*/
+
+font-weight: bold;              /*粗體*/
+
+font-style: italic;             /*斜體*/
+
+font-style:oblique;             /*比 italic 更斜*/
+
 ```
 ## 1.7  文字陰影
 ```
