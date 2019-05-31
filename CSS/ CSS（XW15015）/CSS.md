@@ -102,14 +102,33 @@ text-shadow: 5px 5px 5px #FF0000;     /*水平陰影的位置,垂直陰影的位
 ## 1.8  文字毛玻璃效果                 
 ```
 {                                          /*使用文字陰影和字體透明色搭配,讓字體產生毛玻璃的視覺效果*/
-box-shadow: 1px 1px 2px 2px #ccc inset; /*水平陰影的位置,水平陰影的位置,垂直陰影的位置,模糊的距離,陰影的尺寸,陰影的顏色,外陰影改為內陰影*/
+box-shadow: 1px 1px 2px 2px #ccc inset;    /*水平陰影的位置,水平陰影的位置,垂直陰影的位置,模糊的距離,陰影的尺寸,陰影的顏色,外陰影改為內陰影*/
+
 color:rgba(0,0,0,0);                       /*rgba(紅, 綠, 藍, 透明度)*/
+
 text-shadow: 0 0 10px black;               /*水平陰影的位置,垂直陰影的位置,模糊的距離,陰影的顏色*/
 
 }
 ```
 ## 1.9  文字超出顯示範圍的處理
 ```
+div.hide{
+overflow:hidden;}                    /*自動隱藏超出的文字或圖片*/
+
+div.scroll{
+overflow:scroll;}                    /*自動產生捲軸*/
+
+div.clip{
+overflow:hidden;                     
+white-space: nowrap;                 /*強制在同一行顯示*/
+text-overflow: clip;                 /*裁切*/
+}
+
+div.elli{
+overflow:hidden;
+white-space: nowrap;
+text-overflow: ellipsis;             /*使用省略符號*/
+}
 ```
 ## 1.10 金屬質感的文字
 ```
