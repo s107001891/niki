@@ -64,7 +64,7 @@ word-spacing: 5px;          /*設定空格長度*/
 
 letter-spacing:10px;        /*設定文字間距*/
 
-line-height: 0.3;           /*設定行高*/
+line-height: 24px;          /*設定文字行距*/ 
 
 white-space: normal;        /*預設,連續的空白字元會被合併(collapse),換行字元被視為空白字元,換行只在被文字空間限制時發生*/
 
