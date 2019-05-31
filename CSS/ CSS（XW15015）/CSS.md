@@ -43,5 +43,8 @@ text-transform: capitalize; /*設定整段英文,單字開頭大寫*/
 
 ## 1.3  自訂文字內容被選取的樣式
 ```
-
+.p::selection {             /*設定文字反白時的呈現效果*/
+  color: gold;              /*反白時字體顏色*/
+  background-color: red;    /*反白時字體背景顏色*/
+}
 ```
