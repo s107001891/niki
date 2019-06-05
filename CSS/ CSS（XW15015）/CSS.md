@@ -163,3 +163,22 @@ left: -9999px;                                  /*左側位置點*/
 ## 1.13 現代字體集
 ```
 ```
+
+# Chapter 2 邊框和圖片
+## 2.1  邊框新屬性的基礎與實例
+### 2.1.1
+```
+border-color: red cyan black gold;        /*border-color: 上 右 下 左;*/
+```
+### 2.1.2
+```
+border-image-source: url(image.jpg);     /*邊框的圖片路徑*/
+
+border-image-slice: 33% 33% 33% 33%;     /*圖片裁切border-image-slice: 上 右 下 左;*/
+border-image-slice: 33%;                 /*同上*/
+
+border-image-width: 15px 60px;           /*設定圖片邊框的寬度border-image-width: 上下 左右*/
+
+
+```
+
