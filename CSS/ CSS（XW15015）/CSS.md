@@ -186,4 +186,10 @@ border-image-repeat: repeat;              /*邊框圖片 重複*/
 border-image-repeat: round;               /*邊框圖片 排列*/
 border-image-repeat: round stretch;       /*border-image-repeat:上下邊框 左右邊框*/
 ```
+### 2.1.3
+```
+border-radius: 10% 30% 50% 70%;           /*border-radius:上 右 下 左;*/
+border-radius: 10% / 50%;                 /*border-radius:上 右 下 左(Y軸)/上 右 下 左(X軸)*/
+border-radius: 10% 100% / 120%;           /*border-radius:上(Y軸) 右(Y軸) 下=上(Y軸) 左=右(Y軸)/上 右 下 左(X軸)*/
+```
 
