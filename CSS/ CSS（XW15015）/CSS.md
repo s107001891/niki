@@ -177,8 +177,12 @@ border-image-source: url(image.jpg);     /*邊框的圖片路徑*/
 border-image-slice: 33% 33% 33% 33%;     /*圖片裁切border-image-slice: 上 右 下 左;*/
 border-image-slice: 33%;                 /*同上*/
 
-border-image-width: 15px 60px;           /*設定圖片邊框的寬度border-image-width: 上下 左右*/
+border-image-width: 15px 60px 5px 5px;    /*設定圖片邊框的寬度border-image-width: 上 右 下 左;*/
 
+border-image-outset: 15px;                /*邊框偏移基準點border-image-outset: 上 右 下 左;*/
 
+border-image-repeat: stretch;             /*邊框圖片 延展*/
+border-image-repeat: repeat;              /*邊框圖片 重複*/
+border-image-repeat: round;               /*邊框圖片 排列*/
 ```
 
