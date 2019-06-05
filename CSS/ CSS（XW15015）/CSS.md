@@ -192,4 +192,11 @@ border-radius: 10% 30% 50% 70%;           /*border-radius:上 右 下 左;*/
 border-radius: 10% / 50%;                 /*border-radius:上 右 下 左(Y軸)/上 右 下 左(X軸)*/
 border-radius: 10% 100% / 120%;           /*border-radius:上(Y軸) 右(Y軸) 下=上(Y軸) 左=右(Y軸)/上 右 下 左(X軸)*/
 ```
-
+### 2.1.4
+```
+box-shadow: h-shadow v-shadow blur spread color inset;
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2) inset;  /*box-shadow:水平陰影的位置 垂直陰影的位置 模糊距離 陰影的尺寸 陰影的顏色 將外部陰影(outset) 改為內部陰影*/
+```
+## 2.2  搜尋欄位
+```
+```
