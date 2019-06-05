@@ -184,5 +184,6 @@ border-image-outset: 15px;                /*邊框偏移基準點border-image-ou
 border-image-repeat: stretch;             /*邊框圖片 延展*/
 border-image-repeat: repeat;              /*邊框圖片 重複*/
 border-image-repeat: round;               /*邊框圖片 排列*/
+border-image-repeat: round stretch;       /*border-image-repeat:上下邊框 左右邊框*/
 ```
 
