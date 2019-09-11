@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>ACTF</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="http://120.114.62.30/themes/original/static/img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="http://120.114.62.30/themes/original/static/img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="./view-source_120.114.62.30_challenges_files/bootstrap.min.css">
+		<link rel="stylesheet" href="./view-source_120.114.62.30_challenges_files/font-awesome.min.css">
+		<link href="./view-source_120.114.62.30_challenges_files/lato.css" rel="stylesheet" type="text/css">
+		<link href="./view-source_120.114.62.30_challenges_files/raleway.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="./view-source_120.114.62.30_challenges_files/style.css">
+		<link rel="stylesheet" type="text/css" href="./view-source_120.114.62.30_challenges_files/user.css">
+		
+<style>
+	.hide-text { text-overflow: ellipsis; overflow: hidden; }
+	.dialog-inner {padding-bottom: 30px;}
+	.category-header {text-align: center}
+	.challenge-wrapper {padding: 5px;}
+	.challenge-button {width: 100%; height:100px;}
+	.challenge-button:hover {opacity: 0.9;}
+	.submit-row {padding-top: 0px; padding-right: 0px; padding-left: 0px;}
+	.disabled-button {background-color: #EEEEEE}
+
+	.file-button {text-decoration: none; color: #fff;}
+	.file-button:hover {text-decoration: none; color: #fff;}
+	.file-wrapper {padding: 10px; transition: all 0.5s ease; cursor: pointer; color: #fff; width: 100%; text-overflow: ellipsis; overflow: hidden;}
+	.file-button {cursor: pointer;}
+	.file-button-wrapper {padding: 0px 10px;}
+
+	.close-text {color: #ccc;position: relative;top: -25px;right: -15px;cursor: pointer;}
+	.chal-desc {padding-left: 30px; padding-right: 30px;}
+	.key-submit {padding-top: 14px; padding-right: 10px;}
+	.notification-row {padding-left: 10px;padding-right: 10px;}
+	.input {padding-right: 5px;}
+	.input-field:focus + .input-field,
+	.input--filled .input-field {
+		border-color: rgb(238, 238, 238);
+	}
+	.input-field:focus + .input-field,
+	.input--filled .correct {
+		border-color: rgb(223, 240, 216);
+	}
+	.input-field:focus + .input-field,
+	.input--filled .wrong {
+		border-color: rgb(255, 190, 190);
+	}
+
+	.input-field:focus + .input-field,
+	.input--filled .too-fast {
+		border-color: rgb(252, 248, 227);
+	}
+
+	button {
+		padding: 1em 2em;
+		outline: none;
+		font-weight: 600;
+		border: none;
+		color: #fff;
+		background: #c94e50;
+	}
+
+	.content {
+		max-width: 1000px;
+		padding: 2em;
+		margin: 0 auto;
+	}
+
+	.button-wrap {
+		padding: 2.5em 0 0;
+		font-size: 1.25em;
+	}
+
+	button.trigger {
+		background: #c94e50;
+		color: #fff;
+		border: none;
+	}
+</style>
+
+		
+		<script src="./view-source_120.114.62.30_challenges_files/moment.min.js.下載"></script>
+		<script src="./view-source_120.114.62.30_challenges_files/handlebars.min.js.下載"></script>
+		<script type="text/javascript">
+				var script_root = "";
+		</script>
+</head>
+<body class="" style="">
+	<div class="body-container">
+		<div class="navbar navbar-inverse home">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="http://120.114.62.30/" class="navbar-brand">ACTF</a>
+				</div>
+				<div class="navbar-collapse collapse" aria-expanded="false" style="height: 0px">
+					<ul class="nav navbar-nav">
+						
+						<li><a href="http://120.114.62.30/teams">參賽隊伍</a></li>
+						
+						<li><a href="http://120.114.62.30/scoreboard">計分板</a></li>
+						
+						<li><a href="http://120.114.62.30/challenges">競賽題目</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+					
+						
+						<li><a href="http://120.114.62.30/admin">管理者</a></li>
+						
+						<li><a href="http://120.114.62.30/team/1">解題狀況</a></li>
+						<li><a href="http://120.114.62.30/profile">隊伍資料</a></li>
+						<li><a href="http://120.114.62.30/logout">登出</a></li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		
+
+<div class="jumbotron home">
+	<div class="container">
+		<h1>競賽題目</h1>
+
+	</div>
+</div>
+
+
+
+
+<div class="container main-container">
+	<div id="challenges-board" class="row"><div id="77533963-row"><div class="category-header col-md-2"><h3>Pwn-1</h3></div><div class="category-challenges col-md-12"><div class="chal-row"><div id="3317603" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="241"><h5>leak</h5><span>20</span></button></div></div></div></div><div id="-1900591130-row"><div class="category-header col-md-2"><h3>Reverse-1</h3></div><div class="category-challenges col-md-12"><div class="chal-row"><div id="-1422950650" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="238"><h5>active</h5><span>20</span></button></div><div id="3194802" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="239"><h5>haha</h5><span>20</span></button></div><div id="110644262" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="240"><h5>tryit</h5><span>20</span></button></div></div></div></div><div id="-1359764695-row"><div class="category-header col-md-2"><h3>Advanced-Web</h3></div><div class="category-challenges col-md-12"><div class="chal-row"><div id="318087169" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="229"><h5>BlindJinja2</h5><span>100</span></button></div><div id="2011263327" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="230"><h5>CatHub</h5><span>350</span></button></div><div id="67443143" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="231"><h5>EzWAF</h5><span>150</span></button></div><div id="284151509" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="232"><h5>GhostGIF</h5><span>200</span></button></div><div id="-672067222" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="233"><h5>HackerTyper</h5><span>150</span></button></div><div id="-989012694" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="234"><h5>phplaw</h5><span>100</span></button></div><div id="79159196" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="235"><h5>SQ_QL</h5><span>150</span></button></div><div id="-393113529" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="236"><h5>TripleSigma</h5><span>250</span></button></div><div id="753420712" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="237"><h5>Twofile</h5><span>100</span></button></div></div></div></div><div id="80679-row"><div class="category-header col-md-2"><h3>Pwn</h3></div><div class="category-challenges col-md-12"><div class="chal-row"><div id="-494188649" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="152"><h5>Buffer overflow (easy) 緩衝區溢位_(low,ACTF_104)</h5><span>180</span></button></div><div id="-567253169" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="153"><h5>Buffer overflow (Bof) 緩衝區溢位_(low.ACTF104)</h5><span>100</span></button></div><div id="-1308794659" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="154"><h5>猜數字_(medium.ACTF104)</h5><span>200</span></button></div><div id="1174280791" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="155"><h5>系統入侵__(high,ACTF_104)</h5><span>300</span></button></div><div id="-1132230269" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="190"><h5>pwntools_(low,MyFirstCTF)</h5><span>150</span></button></div><div id="-1316645177" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="191"><h5>return_(low,MyFirstCTF)</h5><span>160</span></button></div><div id="712734586" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="192"><h5>shellcode_(low,MyFirstCTF)</h5><span>170</span></button></div><div id="1330506013" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="193"><h5>rop_(medium,MyFirstCTF)</h5><span>250</span></button></div><div id="872638303" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="194"><h5>memo_manager_(high,MyFirstCTF)</h5><span>350</span></button></div><div id="-2054809131" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="221"><h5>start_(low,MyFirstCTF)</h5><span>140</span></button></div><div id="168182075" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="224"><h5>fmtstr_(high,MyFirstCTF)</h5><span>370</span></button></div><div id="-397129763" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="228"><h5>ret2src_(medium,MyFirstCTF)</h5><span>200</span></button></div></div></div></div><div id="86836-row"><div class="category-header col-md-2"><h3>Web</h3></div><div class="category-challenges col-md-12"><div class="chal-row"><div id="-985191649" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="1"><h5>Developer Tools_(low,MyFirstCTF)</h5><span>50</span></button></div><div id="-408122612" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="73"><h5>robots.txt_(low,MyFirstCTF)</h5><span>50</span></button></div><div id="1585090943" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="78"><h5>SQL injection_(low,MyFirstCTF)</h5><span>100</span></button></div><div id="-1044324042" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="165"><h5>SQL Injection資料庫注入攻擊_(low,ACTF104)</h5><span>100</span></button></div><div id="-1264125274" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="166"><h5>SQL Injection-2_(low,ACTF104)</h5><span>100</span></button></div><div id="-859980209" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="167"><h5>Find the Flag_(high.ACTF104)</h5><span>300</span></button></div><div id="-255377445" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="168"><h5>Code Audit_(medium,ACTF104)</h5><span>200</span></button></div><div id="-966842166" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="169"><h5>Web Babyfirst_(low,ACTF104)</h5><span>150</span></button></div><div id="660688739" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="170"><h5>Something wrong_(low,ACTF104)</h5><span>150</span></button></div><div id="765065866" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="171"><h5>Mission_(medium,ACTF104)</h5><span>200</span></button></div><div id="406152292" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="172"><h5>Login as admin__(high.ACTF104)</h5><span>300</span></button></div><div id="-390314606" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="173"><h5>Profile upload system_(high,ACTF104)</h5><span>300</span></button></div><div id="487904738" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="195"><h5>Command injection_(low,MyFirstCTF)</h5><span>150</span></button></div><div id="-1180125810" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="196"><h5>Flashing_Redirect_(low,MyFirstCTF)</h5><span>150</span></button></div><div id="-2104655748" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="197"><h5>GuessingAdminSession_(medium,MyFirstCTF)</h5><span>250</span></button></div><div id="996729164" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="198"><h5>SSTI_(high,MyFirstCTF)</h5><span>400</span></button></div><div id="1005229162" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="199"><h5>To serialize or Not to serialize_(high,MyFirstCTF)</h5><span>400</span></button></div><div id="1156054460" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="200"><h5>XXE_(high,MyFirstCTF)</h5><span>400</span></button></div><div id="-115622735" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="212"><h5>Local File Inclusion_(low,BreakALL CTF)</h5><span>20</span></button></div><div id="-1385168154" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="213"><h5>XSS_(low,BreakALL CTF)</h5><span>20</span></button></div><div id="-1024172794" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="214"><h5>Download_(high,BreakALL CTF)</h5><span>300</span></button></div><div id="-256745847" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="215"><h5>Orange_demo-1_(medium,BreakALL CTF)</h5><span>200</span></button></div><div id="988018634" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="216"><h5>Orange_demo-2_(medium,BreakALL CTF)</h5><span>200</span></button></div><div id="2887992" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="217"><h5>Orange_demo-3_(high,BreakALL CTF)</h5><span>300</span></button></div><div id="425589818" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="218"><h5>Orange_demo-5_(high,BreakALL CTF)</h5><span>300</span></button></div><div id="1999799068" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="219"><h5>Orange_struts2_(high,BreakALL CTF)</h5><span>300</span></button></div><div id="-1691562414" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="220"><h5>Orange_xxe_(high,BreakALL CTF)</h5><span>300</span></button></div></div></div></div><div id="-1530467646-row"><div class="category-header col-md-2"><h3>Reverse</h3></div><div class="category-challenges col-md-12"><div class="chal-row"><div id="-1488686759" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="2"><h5>soeasy_(low,MyFirstCTF)</h5><span>50</span></button></div><div id="1577263714" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="60"><h5>MyFirstObfuscatedCode_(low,MyFirstCTF)</h5><span>50</span></button></div><div id="1067629040" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="156"><h5>Reversed Engineering_(medium.ACTF104)</h5><span>200</span></button></div><div id="-953554672" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="157"><h5>Reverse Engineering_(medium.ACTF104)</h5><span>200</span></button></div><div id="-689249924" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="158"><h5>逆向工程_(low.ACTF104)</h5><span>190</span></button></div><div id="1218933506" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="159"><h5>逆向工程-2_(medium.ACTF104)</h5><span>200</span></button></div><div id="-1705735338" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="204"><h5>encrypt_(medium,BreakALL CTF)</h5><span>200</span></button></div><div id="1940532463" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="205"><h5>base64_(low,BreakALL CTF)</h5><span>190</span></button></div><div id="-1694811785" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="206"><h5>mutate_(medium,BreakALL CTF)</h5><span>200</span></button></div><div id="-1810076812" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="207"><h5>encode_(high,BreakALL CTF)</h5><span>300</span></button></div><div id="1902025305" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="208"><h5>search_(medium,BreakALL CTF)</h5><span>200</span></button></div><div id="-25348605" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="209"><h5>find_(medium,MyFirstCTF)</h5><span>200</span></button></div><div id="1581757563" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="210"><h5>read-asm_(high,MyFirstCTF)</h5><span>300</span></button></div><div id="-670842960" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="211"><h5>run-asm_(high,MyFirstCTF)</h5><span>300</span></button></div></div></div></div><div id="2398476-row"><div class="category-header col-md-2"><h3>Misc</h3></div><div class="category-challenges col-md-12"><div class="chal-row"><div id="1422931686" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="58"><h5>Ascii_(low,MyFirstCTF)</h5><span>50</span></button></div><div id="1440569130" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="160"><h5>Packet Analysis_(low,ACTF104)</h5><span>30</span></button></div><div id="-114007734" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="161"><h5>challenge and response_(low,ACTF104)</h5><span>40</span></button></div><div id="1514904239" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="162"><h5>What Does The Fox Say_(low,ACTF104)</h5><span>100</span></button></div><div id="-1502848396" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="163"><h5>物聯網安全_(low,ACTF104)</h5><span>180</span></button></div><div id="-1526061069" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="164"><h5>App安全分析_(low,ACTF104)</h5><span>170</span></button></div><div id="-1874653469" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="180"><h5>Secrets in PDF_(low,MyFirstCTF)</h5><span>50</span></button></div><div id="1344159081" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="187"><h5>calculator (ppc-1)_(medium,MyFirstCTF)</h5><span>250</span></button></div><div id="410322613" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="188"><h5>hanoi (ppc-2)_(medium,MyFirstCTF)</h5><span>250</span></button></div><div id="-1844689631" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="189"><h5>blind binary search (ppc-3)_(medium,MyFirstCTF)</h5><span>250</span></button></div></div></div></div><div id="2027150561-row"><div class="category-header col-md-2"><h3>Crypto</h3></div><div class="category-challenges col-md-12"><div class="chal-row"><div id="795054517" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="4"><h5>我愛凱薩_(low,MyFirstCTF)</h5><span>30</span></button></div><div id="-1601451573" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="61"><h5>Transposition ciphers_(low,MyFirstCTF)</h5><span>50</span></button></div><div id="1536486100" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="81"><h5>Md5 collision_(low,MyFirstCTF)</h5><span>150</span></button></div><div id="-566510455" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="149"><h5>彩虹表_(medium,ACTF_104)</h5><span>200</span></button></div><div id="-1028374907" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="150"><h5>走迷宮_(high,ACTF_104)</h5><span>300</span></button></div><div id="638888192" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="151"><h5>密碼學_(high,ACTF_104)</h5><span>300</span></button></div><div id="-1047503882" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="174"><h5>HashingService_(low,MyFirstCTF)</h5><span>50</span></button></div><div id="-1826017587" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="175"><h5>sha1 collision_(low,MyFirstCTF)</h5><span>150</span></button></div><div id="2108563494" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="176"><h5>MyFirstRSA_(medium,MyFirstCTF)</h5><span>200</span></button></div><div id="-1732150279" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="177"><h5>XOR_Cipher_(medium,MyFirstCTF)</h5><span>200</span></button></div><div id="-578000365" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="178"><h5>Apple Shop_(medium,MyFirstCTF)</h5><span>200</span></button></div><div id="-2026672443" class="challenge-wrapper col-md-2"><button class="challenge-button trigger theme-background hide-text" value="179"><h5>Nonsense-Machine_(medium,MyFirstCTF)</h5><span>200</span></button></div></div></div></div></div>
+</div>
+
+<input id="nonce" type="hidden" name="nonce" value="51cb988023d4adb07b24906131eb25276494c4b7cda5bad2e831c9ef902989f04211bfcb0628bf458442f7852a981ca5741bfc648902e61348fcf1cb2f2e8a35">
+
+<div class="modal fade" id="hint-modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header text-center">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+				<h3>Hint</h3>
+			</div>
+			<div class="modal-body" id="hint-modal-body">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="chal-window" tabindex="-1" role="dialog" style="z-index: 1050; display: none;"><div class="modal-dialog" role="document">
+    <div class="modal-content content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="http://120.114.62.30/challenges#challenge" aria-controls="challenge" role="tab">Challenge</a></li>
+            <li role="presentation"><a href="http://120.114.62.30/challenges#solves" aria-controls="solves" class="chal-solves" role="tab">0 Solves</a></li>
+        </ul>
+        <div class="modal-body">
+            <div role="tabpanel">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="challenge">
+                        <h3 class="chal-name text-center">leak</h3>
+                        <h4 class="chal-value text-center">20</h4>
+                        <div class="chal-tags text-center">
+                        </div>
+                        <span class="chal-desc"><p>nc 120.114.62.30 4111</p>
+</span>
+                        <div class="chal-hints file-row row">
+                        </div>
+                        <div class="chal-files file-row row text-center">
+                            <div class="col-md-3 file-button-wrapper">
+                                <a class="file-button" href="http://120.114.62.30/files/f59c1bce03b64d5a466f06ef7169a73e/leak">
+                                    <label class="challenge-wrapper file-wrapper hide-text">
+                                    leak
+                                    </label>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row submit-row">
+                            <div class="col-md-9" style="padding-right:0px;padding-left:10px;">
+                                <span class="input">
+                                    <input class="input-field" type="text" name="answer" id="answer-input" placeholder="請輸入flag">
+                                </span>
+
+                                <input id="chal-id" type="hidden" value="241">
+                            </div>
+                            <div class="col-md-3 key-submit">
+                                <button type="submit" id="submit-key" tabindex="5" class="btn btn-md btn-theme btn-outlined pull-right" style="height:46.375px">送出</button>
+                            </div>
+                        </div>
+                        <div class="row notification-row">
+                            <div id="result-notification" class="alert alert-dismissable text-center" role="alert" style="display: none;">
+                              <strong id="result-message"></strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="solves">
+                        <table class="table table-striped text-center">
+                            <thead>
+                                <tr>
+                                    <td><b>Name</b>
+                                    </td>
+                                    <td><b>Date</b>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody id="chal-solves-names">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+
+
+		<div class="navbar navbar-bottom footer">
+				<p class="text-muted text-center"><a style="text-decoration:none;" href="https://ctfd.io/"><sub>Powered by CTFd</sub></a></p><a style="text-decoration:none;" href="https://ctfd.io/">
+		</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+	</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+	<script src="./view-source_120.114.62.30_challenges_files/jquery.min.js.下載"></script>
+	<script src="./view-source_120.114.62.30_challenges_files/marked.min.js.下載"></script>
+	<script src="./view-source_120.114.62.30_challenges_files/bootstrap.min.js.下載"></script>
+	
+	<script src="./view-source_120.114.62.30_challenges_files/utils.js.下載"></script>
+	<script src="./view-source_120.114.62.30_challenges_files/multi-modal.js.下載"></script>
+	
+	<script src="./view-source_120.114.62.30_challenges_files/chalboard.js.下載"></script>
+	
+	<script src="./view-source_120.114.62.30_challenges_files/style.js.下載"></script>
+
+
+	
+
+</a></body></html>
