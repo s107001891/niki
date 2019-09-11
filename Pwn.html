@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Admin Panel</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="http://120.114.62.34/themes/original/static/img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="http://120.114.62.34/themes/original/static/img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="./Pwn_files/bootstrap.min.css">
+		<link rel="stylesheet" href="./Pwn_files/font-awesome.min.css">
+		<link rel="stylesheet" href="./Pwn_files/style.css">
+		<link href="./Pwn_files/lato.css" rel="stylesheet" type="text/css">
+		<link href="./Pwn_files/raleway.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="./Pwn_files/style.css">
+		<script src="./Pwn_files/moment.min.js.下載"></script>
+		<script src="./Pwn_files/moment-timezone-with-data.min.js.下載"></script>
+		<script src="./Pwn_files/handlebars.min.js.下載"></script>
+		<script type="text/javascript">
+				var script_root = "";
+		</script>
+		
+<style>
+.btn-primary { background-color: #337ab7; }
+.btn-danger { background-color: #d9534f; }
+.col-md-4 { margin-bottom: 15px; }
+.key-remove-button { margin-top: 10px; }
+.delete-tag { color: white; margin-left: 3px; cursor: pointer; }
+</style>
+
+</head>
+
+<body>
+	<div class="body-container">
+		<div class="navbar navbar-inverse home">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="http://120.114.62.34/" class="navbar-brand">CTFd</a>
+				</div>
+				<div class="navbar-collapse collapse" aria-expanded="false" style="height: 0px">
+					<ul class="nav navbar-nav navbar-nav-right">
+						<li><a href="http://120.114.62.34/admin/graphs">Graphs</a></li>
+						<li>
+								<a href="http://120.114.62.34/admin/chals#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+										<li><a href="http://120.114.62.34/admin/pages">All Pages</a></li>
+										<li><a href="http://120.114.62.34/admin/pages?mode=create">New Page</a></li>
+								</ul>
+						</li>
+						<li><a href="http://120.114.62.34/admin/teams">Teams</a></li>
+						<li><a href="http://120.114.62.34/admin/scoreboard">Scoreboard</a></li>
+						<li><a href="http://120.114.62.34/admin/chals">Challenges</a></li>
+						<li><a href="http://120.114.62.34/admin/statistics">Statistics</a></li>
+						<li><a href="http://120.114.62.34/admin/config">Config</a></li>
+						<li>
+							<a href="http://120.114.62.34/admin/chals#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plugins <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+				
+	<div id="email-user" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<input type="hidden" value="9f53cadfd16c630a6f0f04f15108a0442a0fc4702c7f23588f0f1fb0e066a00b21ff69c3cb81e47b1da74323c377ac6836cf1396ca10999c16c4a3251771b1e4" id="nonce">
+
+	<div id="create-challenge" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h3>New Challenge</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="update-modals-entry-div">
+	</div>
+
+	<div style="text-align:center">
+		<br>
+		<h1 class="text-center">Challenges</h1>
+		<a class="btn btn-theme btn-outlined create-challenge" href="http://120.114.62.34/admin/chal/new" role="button">New Challenge</a>
+		<div>
+			<table id="challenges"><tr id="80679"><td class="col-md-1"><h3>Pwn</h3></td><button class="chal-button col-md-2 theme-background" value="170"><h5>baby_fmt</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="171"><h5>fmt-1</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="172"><h5>fmt-2</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="173"><h5>fmt-3</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="174"><h5>printable</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="175"><h5>uaf</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="176"><h5>tcache</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="177"><h5>baby_heap</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button></tr><tr id="1734436875"><td class="col-md-1"><h3>Level 4</h3></td><button class="chal-button col-md-2 theme-background" value="32"><h5>張元_Pwn-2</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="34"><h5>張元_Pwn-4</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="35"><h5>張元_Pwn-5</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="113"><h5>Angelboy_Pwn-7</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="114"><h5>Angelboy_Pwn-8</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="167"><h5>rop3-sean_Pwn-4</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="168"><h5>heap1-sean_Pwn-5</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="169"><h5>heap2-sean_Pwn-6</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button></tr><tr id="1734436874"><td class="col-md-1"><h3>Level 3</h3></td><button class="chal-button col-md-2 theme-background" value="33"><h5>張元_Pwn-3</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="110"><h5>Angelboy_Pwn-4</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="111"><h5>Angelboy_Pwn-5</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="112"><h5>Angelboy_Pwn-6</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="165"><h5>rop1-sean_Pwn-2</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="166"><h5>rop2-sean_Pwn-3</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button></tr><tr id="1734436873"><td class="col-md-1"><h3>Level 2</h3></td><button class="chal-button col-md-2 theme-background" value="31"><h5>張元_Pwn-1</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="105"><h5>張元_Pwn-9</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="106"><h5>張元_Pwn-10</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="109"><h5>Angelboy_Pwn-3</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="150"><h5>fmtstr</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="159"><h5>oob1-sean_Pwn-1</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="160"><h5>oob2-sean_Pwn-2</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="161"><h5>oob3-sean_Pwn-3</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="162"><h5>oob4-sean_Pwn-4</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="163"><h5>oob5-sean_Pwn-5</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="164"><h5>rop0-sean_Pwn-1</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button></tr><tr id="1734436872"><td class="col-md-1"><h3>Level 1</h3></td><button class="chal-button col-md-2 theme-background" value="102"><h5>張元_Pwn-6</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="103"><h5>張元_Pwn-7</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="104"><h5>張元_Pwn-8</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="107"><h5>Angelboy_Pwn-1</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="108"><h5>Angelboy_Pwn-2</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="147"><h5>start</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="148"><h5>pass</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="149"><h5>gohome</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="151"><h5>registration</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="152"><h5>echo_server</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="153"><h5>secret</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="154"><h5>ret2src</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button></tr></table>
+		</div>
+	</div>
+
+				<div class="navbar navbar-bottom footer">
+						<p class="text-muted text-center"><a style="text-decoration:none;" href="https://ctfd.io/"><sub>Powered by CTFd</sub></a></p><a style="text-decoration:none;" href="https://ctfd.io/">
+				</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+		</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+	</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+		<script src="./Pwn_files/jquery.min.js.下載"></script>
+		<script src="./Pwn_files/marked.min.js.下載"></script>
+		<script src="./Pwn_files/bootstrap.min.js.下載"></script>
+		<script src="./Pwn_files/main.js.下載"></script>
+		<script src="./Pwn_files/utils.js.下載"></script>
+		
+	<script src="./Pwn_files/utils.js.下載"></script>
+	<script src="./Pwn_files/chalboard.js.下載"></script>
+	<script src="./Pwn_files/multi-modal.js.下載"></script>
+
+
+
+</a></body></html>
