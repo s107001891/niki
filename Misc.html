@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Admin Panel</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="http://120.114.62.33/themes/original/static/img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="http://120.114.62.33/themes/original/static/img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="./Mini_files/bootstrap.min.css">
+		<link rel="stylesheet" href="./Mini_files/font-awesome.min.css">
+		<link rel="stylesheet" href="./Mini_files/style.css">
+		<link href="./Mini_files/lato.css" rel="stylesheet" type="text/css">
+		<link href="./Mini_files/raleway.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="./Mini_files/style.css">
+		<script src="./Mini_files/moment.min.js.下載"></script>
+		<script src="./Mini_files/moment-timezone-with-data.min.js.下載"></script>
+		<script src="./Mini_files/handlebars.min.js.下載"></script>
+		<script type="text/javascript">
+				var script_root = "";
+		</script>
+		
+<style>
+.btn-primary { background-color: #337ab7; }
+.btn-danger { background-color: #d9534f; }
+.col-md-4 { margin-bottom: 15px; }
+.key-remove-button { margin-top: 10px; }
+.delete-tag { color: white; margin-left: 3px; cursor: pointer; }
+</style>
+
+</head>
+
+<body class="" style="">
+	<div class="body-container">
+		<div class="navbar navbar-inverse home">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="http://120.114.62.33/" class="navbar-brand">CTFd</a>
+				</div>
+				<div class="navbar-collapse collapse" aria-expanded="false" style="height: 0px">
+					<ul class="nav navbar-nav navbar-nav-right">
+						<li><a href="http://120.114.62.33/admin/graphs">Graphs</a></li>
+						<li>
+								<a href="http://120.114.62.33/admin/chals#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+										<li><a href="http://120.114.62.33/admin/pages">All Pages</a></li>
+										<li><a href="http://120.114.62.33/admin/pages?mode=create">New Page</a></li>
+								</ul>
+						</li>
+						<li><a href="http://120.114.62.33/admin/teams">Teams</a></li>
+						<li><a href="http://120.114.62.33/admin/scoreboard">Scoreboard</a></li>
+						<li><a href="http://120.114.62.33/admin/chals">Challenges</a></li>
+						<li><a href="http://120.114.62.33/admin/statistics">Statistics</a></li>
+						<li><a href="http://120.114.62.33/admin/config">Config</a></li>
+						<li>
+							<a href="http://120.114.62.33/admin/chals#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plugins <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+				
+	<div id="email-user" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<input type="hidden" value="5577df4f4992b4afc79c7a7c077a8ffdac6041d3125cb10180f6470b6e294de04ef2af4692d0ad8ebfea4f311e2833c90b7f62eddd185f7a78f045f19ac2cc8a" id="nonce">
+
+	<div id="create-challenge" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h3>New Challenge</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="update-modals-entry-div"><div id="update-challenge" class="modal fade" tabindex="-1" style="z-index: 1050; display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3 class="chal-title text-center">AIS3_Pre_exam_2015-Misc3</h3>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="http://120.114.62.33/admin/chal/update">
+                    <input name="nonce" type="hidden" value="5577df4f4992b4afc79c7a7c077a8ffdac6041d3125cb10180f6470b6e294de04ef2af4692d0ad8ebfea4f311e2833c90b7f62eddd185f7a78f045f19ac2cc8a">
+
+                    <div class="form-group">
+                        <label for="name">Name
+                            <i class="fa fa-question-circle gray-text" data-toggle="tooltip" data-placement="right" title="" data-original-title="The name of your challenge"></i>
+                        </label>
+                        <input type="text" class="form-control chal-name" name="name" placeholder="Enter challenge name">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category
+                            <i class="fa fa-question-circle gray-text" data-toggle="tooltip" data-placement="right" title="" data-original-title="The category of your challenge"></i>
+                        </label>
+                        <input type="text" class="form-control chal-category" name="category" placeholder="Enter challenge category">
+                    </div>
+
+                    <ul class="nav nav-tabs" role="tablist" id="desc-edit">
+                        <li role="presentation" class="active"><a href="http://120.114.62.33/admin/chals#desc-write" id="desc-write-link" aria-controls="home" role="tab" data-toggle="tab">Write</a></li>
+                        <li role="presentation"><a href="http://120.114.62.33/admin/chals#desc-preview" aria-controls="home" role="tab" data-toggle="tab">Preview</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="desc-write">
+                            <div class="form-group">
+                                <label for="message-text" class="control-label">Message:
+                                    <i class="fa fa-question-circle gray-text" data-toggle="tooltip" data-placement="right" title="" data-original-title="Use this to give a brief introduction to your challenge. The description supports HTML and Markdown."></i>
+                                </label>
+                                <textarea id="desc-editor" class="form-control chal-desc" name="desc" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane content" id="desc-preview" style="height:214px; overflow-y: scroll;">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="value">Value
+                            <i class="fa fa-question-circle gray-text" data-toggle="tooltip" data-placement="right" title="" data-original-title="This is how many points teams will receive once they solve this challenge."></i>
+                        </label>
+                        <input type="number" class="form-control chal-value" name="value" placeholder="Enter value" required="">
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input class="chal-attempts-checkbox" id="limit_max_attempts" name="limit_max_attempts" type="checkbox">
+                            Limit challenge attempts
+                        </label>
+                    </div>
+
+                    <div class="form-group" id="chal-attempts-group" style="display:none;">
+                        <label for="value">Max Attempts</label>
+                        <input type="number" class="form-control chal-attempts" id="chal-attempts-input" name="max_attempts" placeholder="Enter value">
+                    </div>
+                    <input class="chal-id" type="hidden" name="id" placeholder="ID" value="89">
+
+                    <div class="checkbox">
+                        <label>
+                            <input class="chal-hidden" name="hidden" type="checkbox">
+                            Hidden
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <a href="http://120.114.62.33/admin/chals#" data-toggle="modal" data-target="#update-tags" class="btn btn-primary">Tags</a>
+                        <a href="http://120.114.62.33/admin/chals#" data-toggle="modal" data-target="#update-files" class="btn btn-primary">Files</a>
+                        <a href="http://120.114.62.33/admin/chals#" data-toggle="modal" data-target="#update-hints" class="btn btn-primary">Hints</a>
+                        <a href="http://120.114.62.33/admin/chals#" data-toggle="modal" data-target="#update-keys" class="btn btn-primary">Keys</a>
+                        <a href="http://120.114.62.33/admin/chals#" data-toggle="modal" data-target="#delete-chal" class="btn btn-danger">Delete</a>
+                    </div>
+                    <input type="hidden" value="5577df4f4992b4afc79c7a7c077a8ffdac6041d3125cb10180f6470b6e294de04ef2af4692d0ad8ebfea4f311e2833c90b7f62eddd185f7a78f045f19ac2cc8a" name="nonce" id="nonce">
+                    <div style="text-align:center">
+                        <button class="btn btn-theme btn-outlined update-challenge-submit" type="submit">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="update-tags" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3>Tags</h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="tag-insert">Value</label>
+                    <input max-length="80" type="text" class="form-control tag-insert" name="tag-insert" placeholder="Type tag and press Enter">
+                </div>
+                <input name="nonce" type="hidden" value="5577df4f4992b4afc79c7a7c077a8ffdac6041d3125cb10180f6470b6e294de04ef2af4692d0ad8ebfea4f311e2833c90b7f62eddd185f7a78f045f19ac2cc8a">
+                <input id="tags-chal" name="chal" type="hidden" value="89">
+
+                <div id="current-tags"></div>
+                <br>
+                <div id="chal-tags"></div>
+                <div class="row" style="text-align:center;margin-top:20px">
+                    <input type="hidden" value="5577df4f4992b4afc79c7a7c077a8ffdac6041d3125cb10180f6470b6e294de04ef2af4692d0ad8ebfea4f311e2833c90b7f62eddd185f7a78f045f19ac2cc8a" name="nonce" id="nonce">
+                    <button class="btn btn-theme btn-outlined" id="submit-tags">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="update-files" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3>Files</h3>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="http://120.114.62.33/admin/files/89" enctype="multipart/form-data">
+                    <input name="nonce" type="hidden" value="5577df4f4992b4afc79c7a7c077a8ffdac6041d3125cb10180f6470b6e294de04ef2af4692d0ad8ebfea4f311e2833c90b7f62eddd185f7a78f045f19ac2cc8a">
+                    <input id="files-chal" name="chal" type="hidden" value="89">
+                    <input name="method" type="hidden" value="upload">
+
+                    <div id="current-files"><div class="row" style="margin:5px 0px;"><a style="position:relative;top:10px;" href="http://120.114.62.33/files/7fd47d4a63b3f799736e44bf50349bd1/misc3">misc3</a><a href="http://120.114.62.33/admin/chals#" class="btn btn-danger" onclick="deletefile(89,70, $(this))" value="70" style="float:right;">Delete</a></div></div>
+                    <input type="hidden" name="method" value="upload">
+                    <input type="file" name="files[]" multiple="multiple">
+                    <sub class="help-block">Attach multiple files using Control+Click or Cmd+Click.</sub>
+                    <div class="row" style="text-align:center;margin-top:20px">
+                        <input type="hidden" value="5577df4f4992b4afc79c7a7c077a8ffdac6041d3125cb10180f6470b6e294de04ef2af4692d0ad8ebfea4f311e2833c90b7f62eddd185f7a78f045f19ac2cc8a" name="nonce" id="nonce">
+                        <button class="btn btn-theme btn-outlined" id="submit-files">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="update-hints" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3>Hints</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row" style="text-align:center">
+                    <a href="http://120.114.62.33/admin/chals#" id="create-hint" class="btn btn-primary" style="margin-bottom:15px;">New Hint</a>
+                </div>
+                <div class="current-hints">
+                    <table id="hintsboard" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td class="text-center"><b>Hint</b></td>
+                                <td class="text-center"><b>Cost</b></td>
+                                <td class="text-center"><b>Settings</b></td>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="update-keys" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3>Keys</h3>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="http://120.114.62.33/admin/keys" style="text-align:center">
+                    <a href="http://120.114.62.33/admin/chals#" id="create-key" class="btn btn-primary" style="margin-bottom:15px;">New Key</a>
+                    <input name="nonce" type="hidden" value="5577df4f4992b4afc79c7a7c077a8ffdac6041d3125cb10180f6470b6e294de04ef2af4692d0ad8ebfea4f311e2833c90b7f62eddd185f7a78f045f19ac2cc8a">
+                    <input id="keys-chal" name="chal" type="hidden" value="89">
+                    <div id="current-keys" class="row"><table id="keysboard" class="table table-striped">
+    <thead>
+        <tr>
+            <td class="text-center"><b>Type</b></td>
+            <td class="text-center"><b>Key</b></td>
+            <td class="text-center"><b>Settings</b></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr name="89">
+            <td class="key-type">static</td>
+            <td class="key-value">AIS3{fuck_the_javascript_interpreter}</td>
+            <td class="text-center"><span>
+                <i role="button" class="fa fa-pencil-square-o" onclick="javascript:load_edit_key_modal(89, &#39;static&#39;)"></i>
+                <i role="button" class="fa fa-times" onclick="javascript:deletekey(89)"></i>
+            </span>
+            </td>
+        </tr>
+    </tbody>
+</table></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="delete-chal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3>Delete Challenge</h3>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="http://120.114.62.33/admin/chal/delete">
+                    <input type="hidden" name="nonce" value="5577df4f4992b4afc79c7a7c077a8ffdac6041d3125cb10180f6470b6e294de04ef2af4692d0ad8ebfea4f311e2833c90b7f62eddd185f7a78f045f19ac2cc8a">
+                    <input type="hidden" name="id" class="chal-id" value="89">
+                    <div class="small-6 small-centered text-center columns">
+                        <p>Are you sure you want to delete this challenge?</p>
+                        <p>Solves, wrong keys, files, tags will all be deleted.</p>
+                        <a onclick="$(&#39;#delete-chal&#39;).modal(&#39;hide&#39;)" class="btn btn-primary">No</a>
+                        <button class="btn btn-danger" id="delete-user" type="submit">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="create-keys" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <input type="hidden" class="chal-id" name="chal-id" value="89">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3>Create Key</h3>
+            </div>
+            <div class="modal-body">
+                <div class="create-keys-select-div">
+                    <label for="create-keys-select" class="control-label">Choose Key Type</label>
+                    <select class="form-control" id="create-keys-select">
+                    </select>
+                </div>
+                <br>
+                <div id="create-keys-entry-div">
+                </div>
+                <br>
+                <div style="text-align:center;display:none;" id="create-keys-button-div">
+                   <button id="create-keys-submit" class="btn btn-theme btn-outlined">Create Key</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="edit-keys" class="modal fade" tabindex="-1">
+</div>
+
+<div id="hint-modal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3 id="hint-modal-title"></h3>
+            </div>
+            <div class="modal-body">
+                <form id="hint-modal-submit" method="POST">
+                    <input type="hidden" class="chal-id" name="chal" value="89">
+                    <div class="form-group">
+                        <textarea id="hint-modal-hint" type="text" class="form-control" name="hint" placeholder="Hint"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input id="hint-modal-cost" type="number" class="form-control" name="cost" placeholder="Cost">
+                    </div>
+                    <div class="row" style="text-align:center;margin-top:20px">
+                        <input type="hidden" value="5577df4f4992b4afc79c7a7c077a8ffdac6041d3125cb10180f6470b6e294de04ef2af4692d0ad8ebfea4f311e2833c90b7f62eddd185f7a78f045f19ac2cc8a" name="nonce" id="nonce">
+                        <button class="btn btn-theme btn-outlined" id="hint-modal-button">Add Hint</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+	<div style="text-align:center">
+		<br>
+		<h1 class="text-center">Challenges</h1>
+		<a class="btn btn-theme btn-outlined create-challenge" href="http://120.114.62.33/admin/chal/new" role="button">New Challenge</a>
+		<div>
+			<table id="challenges"><tr id="79427"><td class="col-md-1"><h3>PPC</h3></td><button class="chal-button col-md-2 theme-background" value="132"><h5>calculator</h5><p class="chal-points">200</p><span class="chal-percent">100% solved</span></button><button class="chal-button col-md-2 theme-background" value="133"><h5>hanoi</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="134"><h5>blind binary search</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="159"><h5>get-the-root</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="160"><h5>hurry-up</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="161"><h5>lambda</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="162"><h5>translation</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="163"><h5>ooxx</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="164"><h5>temperature</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="165"><h5>alphabet</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="166"><h5>imposters</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="167"><h5>pi</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="168"><h5>primes</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="169"><h5>vending-machine</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button></tr><tr id="2398476"><td class="col-md-1"><h3>Misc</h3></td><button class="chal-button col-md-2 theme-background" value="87"><h5>AIS3_Pre_exam_2015-Misc2</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="88"><h5>AIS3_Pre_exam_2016-Misc2</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="89"><h5>AIS3_Pre_exam_2015-Misc3</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button></tr></table>
+		</div>
+	</div>
+
+				<div class="navbar navbar-bottom footer">
+						<p class="text-muted text-center"><a style="text-decoration:none;" href="https://ctfd.io/"><sub>Powered by CTFd</sub></a></p><a style="text-decoration:none;" href="https://ctfd.io/">
+				</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+		</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+	</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+		<script src="./Mini_files/jquery.min.js.下載"></script>
+		<script src="./Mini_files/marked.min.js.下載"></script>
+		<script src="./Mini_files/bootstrap.min.js.下載"></script>
+		<script src="./Mini_files/main.js.下載"></script>
+		<script src="./Mini_files/utils.js.下載"></script>
+		
+	<script src="./Mini_files/utils.js.下載"></script>
+	<script src="./Mini_files/chalboard.js.下載"></script>
+	<script src="./Mini_files/multi-modal.js.下載"></script>
+
+
+
+</a></body></html>
