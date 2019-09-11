@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Admin Panel</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="http://120.114.62.30/themes/original/static/img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="http://120.114.62.30/themes/original/static/img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="./ACTF_files/bootstrap.min.css">
+		<link rel="stylesheet" href="./ACTF_files/font-awesome.min.css">
+		<link rel="stylesheet" href="./ACTF_files/style.css">
+		<link href="./ACTF_files/lato.css" rel="stylesheet" type="text/css">
+		<link href="./ACTF_files/raleway.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="./ACTF_files/style.css">
+		<script src="./ACTF_files/moment.min.js.下載"></script>
+		<script src="./ACTF_files/moment-timezone-with-data.min.js.下載"></script>
+		<script src="./ACTF_files/handlebars.min.js.下載"></script>
+		<script type="text/javascript">
+				var script_root = "";
+		</script>
+		
+<style>
+.btn-primary { background-color: #337ab7; }
+.btn-danger { background-color: #d9534f; }
+.col-md-4 { margin-bottom: 15px; }
+.key-remove-button { margin-top: 10px; }
+.delete-tag { color: white; margin-left: 3px; cursor: pointer; }
+</style>
+
+</head>
+
+<body>
+	<div class="body-container">
+		<div class="navbar navbar-inverse home">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="http://120.114.62.30/" class="navbar-brand">CTFd</a>
+				</div>
+				<div class="navbar-collapse collapse" aria-expanded="false" style="height: 0px">
+					<ul class="nav navbar-nav navbar-nav-right">
+						<li><a href="http://120.114.62.30/admin/graphs">Graphs</a></li>
+						<li>
+								<a href="http://120.114.62.30/admin/chals#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+										<li><a href="http://120.114.62.30/admin/pages">All Pages</a></li>
+										<li><a href="http://120.114.62.30/admin/pages?mode=create">New Page</a></li>
+								</ul>
+						</li>
+						<li><a href="http://120.114.62.30/admin/teams">Teams</a></li>
+						<li><a href="http://120.114.62.30/admin/scoreboard">Scoreboard</a></li>
+						<li><a href="http://120.114.62.30/admin/chals">Challenges</a></li>
+						<li><a href="http://120.114.62.30/admin/statistics">Statistics</a></li>
+						<li><a href="http://120.114.62.30/admin/config">Config</a></li>
+						<li>
+							<a href="http://120.114.62.30/admin/chals#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plugins <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+				
+	<div id="email-user" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<input type="hidden" value="51cb988023d4adb07b24906131eb25276494c4b7cda5bad2e831c9ef902989f04211bfcb0628bf458442f7852a981ca5741bfc648902e61348fcf1cb2f2e8a35" id="nonce">
+
+	<div id="create-challenge" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h3>New Challenge</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="update-modals-entry-div">
+	</div>
+
+	<div style="text-align:center">
+		<br>
+		<h1 class="text-center">Challenges</h1>
+		<a class="btn btn-theme btn-outlined create-challenge" href="http://120.114.62.30/admin/chal/new" role="button">New Challenge</a>
+		<div>
+			<table id="challenges"><tr id="86836"><td class="col-md-1"><h3>Web</h3></td><button class="chal-button col-md-2 theme-background" value="212"><h5>Local File Inclusion_(low,BreakALL CTF)</h5><p class="chal-points">20</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="213"><h5>XSS_(low,BreakALL CTF)</h5><p class="chal-points">20</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="1"><h5>Developer Tools_(low,MyFirstCTF)</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="73"><h5>robots.txt_(low,MyFirstCTF)</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="78"><h5>SQL injection_(low,MyFirstCTF)</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="165"><h5>SQL Injection資料庫注入攻擊_(low,ACTF104)</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="166"><h5>SQL Injection-2_(low,ACTF104)</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="169"><h5>Web Babyfirst_(low,ACTF104)</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="170"><h5>Something wrong_(low,ACTF104)</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="195"><h5>Command injection_(low,MyFirstCTF)</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="196"><h5>Flashing_Redirect_(low,MyFirstCTF)</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="168"><h5>Code Audit_(medium,ACTF104)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="171"><h5>Mission_(medium,ACTF104)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="215"><h5>Orange_demo-1_(medium,BreakALL CTF)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="216"><h5>Orange_demo-2_(medium,BreakALL CTF)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="197"><h5>GuessingAdminSession_(medium,MyFirstCTF)</h5><p class="chal-points">250</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="167"><h5>Find the Flag_(high.ACTF104)</h5><p class="chal-points">300</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="172"><h5>Login as admin__(high.ACTF104)</h5><p class="chal-points">300</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="173"><h5>Profile upload system_(high,ACTF104)</h5><p class="chal-points">300</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="214"><h5>Download_(high,BreakALL CTF)</h5><p class="chal-points">300</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="217"><h5>Orange_demo-3_(high,BreakALL CTF)</h5><p class="chal-points">300</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="218"><h5>Orange_demo-5_(high,BreakALL CTF)</h5><p class="chal-points">300</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="219"><h5>Orange_struts2_(high,BreakALL CTF)</h5><p class="chal-points">300</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="220"><h5>Orange_xxe_(high,BreakALL CTF)</h5><p class="chal-points">300</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="198"><h5>SSTI_(high,MyFirstCTF)</h5><p class="chal-points">400</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="199"><h5>To serialize or Not to serialize_(high,MyFirstCTF)</h5><p class="chal-points">400</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="200"><h5>XXE_(high,MyFirstCTF)</h5><p class="chal-points">400</p><span class="chal-percent">0% solved</span></button></tr><tr id="80679"><td class="col-md-1"><h3>Pwn</h3></td><button class="chal-button col-md-2 theme-background" value="153"><h5>Buffer overflow (Bof) 緩衝區溢位_(low.ACTF104)</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="221"><h5>start_(low,MyFirstCTF)</h5><p class="chal-points">140</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="190"><h5>pwntools_(low,MyFirstCTF)</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="191"><h5>return_(low,MyFirstCTF)</h5><p class="chal-points">160</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="192"><h5>shellcode_(low,MyFirstCTF)</h5><p class="chal-points">170</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="152"><h5>Buffer overflow (easy) 緩衝區溢位_(low,ACTF_104)</h5><p class="chal-points">180</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="154"><h5>猜數字_(medium.ACTF104)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="228"><h5>ret2src_(medium,MyFirstCTF)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="193"><h5>rop_(medium,MyFirstCTF)</h5><p class="chal-points">250</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="155"><h5>系統入侵__(high,ACTF_104)</h5><p class="chal-points">300</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="194"><h5>memo_manager_(high,MyFirstCTF)</h5><p class="chal-points">350</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="224"><h5>fmtstr_(high,MyFirstCTF)</h5><p class="chal-points">370</p><span class="chal-percent">0% solved</span></button></tr><tr id="-1359764695"><td class="col-md-1"><h3>Advanced-Web</h3></td><button class="chal-button col-md-2 theme-background" value="229"><h5>BlindJinja2</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="234"><h5>phplaw</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="237"><h5>Twofile</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="231"><h5>EzWAF</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="233"><h5>HackerTyper</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="235"><h5>SQ_QL</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="232"><h5>GhostGIF</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="236"><h5>TripleSigma</h5><p class="chal-points">250</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="230"><h5>CatHub</h5><p class="chal-points">350</p><span class="chal-percent">0% solved</span></button></tr><tr id="-1530467646"><td class="col-md-1"><h3>Reverse</h3></td><button class="chal-button col-md-2 theme-background" value="2"><h5>soeasy_(low,MyFirstCTF)</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="60"><h5>MyFirstObfuscatedCode_(low,MyFirstCTF)</h5><p class="chal-points">50</p><span class="chal-percent">100% solved</span></button><button class="chal-button col-md-2 theme-background" value="158"><h5>逆向工程_(low.ACTF104)</h5><p class="chal-points">190</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="205"><h5>base64_(low,BreakALL CTF)</h5><p class="chal-points">190</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="156"><h5>Reversed Engineering_(medium.ACTF104)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="157"><h5>Reverse Engineering_(medium.ACTF104)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="159"><h5>逆向工程-2_(medium.ACTF104)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="204"><h5>encrypt_(medium,BreakALL CTF)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="206"><h5>mutate_(medium,BreakALL CTF)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="208"><h5>search_(medium,BreakALL CTF)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="209"><h5>find_(medium,MyFirstCTF)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="207"><h5>encode_(high,BreakALL CTF)</h5><p class="chal-points">300</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="210"><h5>read-asm_(high,MyFirstCTF)</h5><p class="chal-points">300</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="211"><h5>run-asm_(high,MyFirstCTF)</h5><p class="chal-points">300</p><span class="chal-percent">0% solved</span></button></tr><tr id="2027150561"><td class="col-md-1"><h3>Crypto</h3></td><button class="chal-button col-md-2 theme-background" value="4"><h5>我愛凱薩_(low,MyFirstCTF)</h5><p class="chal-points">30</p><span class="chal-percent">100% solved</span></button><button class="chal-button col-md-2 theme-background" value="61"><h5>Transposition ciphers_(low,MyFirstCTF)</h5><p class="chal-points">50</p><span class="chal-percent">100% solved</span></button><button class="chal-button col-md-2 theme-background" value="174"><h5>HashingService_(low,MyFirstCTF)</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="81"><h5>Md5 collision_(low,MyFirstCTF)</h5><p class="chal-points">150</p><span class="chal-percent">100% solved</span></button><button class="chal-button col-md-2 theme-background" value="175"><h5>sha1 collision_(low,MyFirstCTF)</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="149"><h5>彩虹表_(medium,ACTF_104)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="176"><h5>MyFirstRSA_(medium,MyFirstCTF)</h5><p class="chal-points">200</p><span class="chal-percent">100% solved</span></button><button class="chal-button col-md-2 theme-background" value="177"><h5>XOR_Cipher_(medium,MyFirstCTF)</h5><p class="chal-points">200</p><span class="chal-percent">100% solved</span></button><button class="chal-button col-md-2 theme-background" value="178"><h5>Apple Shop_(medium,MyFirstCTF)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="179"><h5>Nonsense-Machine_(medium,MyFirstCTF)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="150"><h5>走迷宮_(high,ACTF_104)</h5><p class="chal-points">300</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="151"><h5>密碼學_(high,ACTF_104)</h5><p class="chal-points">300</p><span class="chal-percent">0% solved</span></button></tr><tr id="2398476"><td class="col-md-1"><h3>Misc</h3></td><button class="chal-button col-md-2 theme-background" value="160"><h5>Packet Analysis_(low,ACTF104)</h5><p class="chal-points">30</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="161"><h5>challenge and response_(low,ACTF104)</h5><p class="chal-points">40</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="58"><h5>Ascii_(low,MyFirstCTF)</h5><p class="chal-points">50</p><span class="chal-percent">100% solved</span></button><button class="chal-button col-md-2 theme-background" value="180"><h5>Secrets in PDF_(low,MyFirstCTF)</h5><p class="chal-points">50</p><span class="chal-percent">100% solved</span></button><button class="chal-button col-md-2 theme-background" value="162"><h5>What Does The Fox Say_(low,ACTF104)</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="164"><h5>App安全分析_(low,ACTF104)</h5><p class="chal-points">170</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="163"><h5>物聯網安全_(low,ACTF104)</h5><p class="chal-points">180</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="187"><h5>calculator (ppc-1)_(medium,MyFirstCTF)</h5><p class="chal-points">250</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="188"><h5>hanoi (ppc-2)_(medium,MyFirstCTF)</h5><p class="chal-points">250</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="189"><h5>blind binary search (ppc-3)_(medium,MyFirstCTF)</h5><p class="chal-points">250</p><span class="chal-percent">0% solved</span></button></tr><tr id="77533963"><td class="col-md-1"><h3>Pwn-1</h3></td><button class="chal-button col-md-2 theme-background" value="241"><h5>leak</h5><p class="chal-points">20</p><span class="chal-percent">0% solved</span></button></tr><tr id="-1900591130"><td class="col-md-1"><h3>Reverse-1</h3></td><button class="chal-button col-md-2 theme-background" value="238"><h5>active</h5><p class="chal-points">20</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="239"><h5>haha</h5><p class="chal-points">20</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="240"><h5>tryit</h5><p class="chal-points">20</p><span class="chal-percent">0% solved</span></button></tr></table>
+		</div>
+	</div>
+
+				<div class="navbar navbar-bottom footer">
+						<p class="text-muted text-center"><a style="text-decoration:none;" href="https://ctfd.io/"><sub>Powered by CTFd</sub></a></p><a style="text-decoration:none;" href="https://ctfd.io/">
+				</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+		</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+	</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+		<script src="./ACTF_files/jquery.min.js.下載"></script>
+		<script src="./ACTF_files/marked.min.js.下載"></script>
+		<script src="./ACTF_files/bootstrap.min.js.下載"></script>
+		<script src="./ACTF_files/main.js.下載"></script>
+		<script src="./ACTF_files/utils.js.下載"></script>
+		
+	<script src="./ACTF_files/utils.js.下載"></script>
+	<script src="./ACTF_files/chalboard.js.下載"></script>
+	<script src="./ACTF_files/multi-modal.js.下載"></script>
+
+
+
+</a></body></html>
