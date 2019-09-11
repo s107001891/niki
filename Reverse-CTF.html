@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Admin Panel</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="http://120.114.62.31/themes/original/static/img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="http://120.114.62.31/themes/original/static/img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="./Reverse-CTF_files/bootstrap.min.css">
+		<link rel="stylesheet" href="./Reverse-CTF_files/font-awesome.min.css">
+		<link rel="stylesheet" href="./Reverse-CTF_files/style.css">
+		<link href="./Reverse-CTF_files/lato.css" rel="stylesheet" type="text/css">
+		<link href="./Reverse-CTF_files/raleway.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="./Reverse-CTF_files/style.css">
+		<script src="./Reverse-CTF_files/moment.min.js.下載"></script>
+		<script src="./Reverse-CTF_files/moment-timezone-with-data.min.js.下載"></script>
+		<script src="./Reverse-CTF_files/handlebars.min.js.下載"></script>
+		<script type="text/javascript">
+				var script_root = "";
+		</script>
+		
+<style>
+.btn-primary { background-color: #337ab7; }
+.btn-danger { background-color: #d9534f; }
+.col-md-4 { margin-bottom: 15px; }
+.key-remove-button { margin-top: 10px; }
+.delete-tag { color: white; margin-left: 3px; cursor: pointer; }
+</style>
+
+</head>
+
+<body>
+	<div class="body-container">
+		<div class="navbar navbar-inverse home">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="http://120.114.62.31/" class="navbar-brand">CTFd</a>
+				</div>
+				<div class="navbar-collapse collapse" aria-expanded="false" style="height: 0px">
+					<ul class="nav navbar-nav navbar-nav-right">
+						<li><a href="http://120.114.62.31/admin/graphs">Graphs</a></li>
+						<li>
+								<a href="http://120.114.62.31/admin/chals#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+										<li><a href="http://120.114.62.31/admin/pages">All Pages</a></li>
+										<li><a href="http://120.114.62.31/admin/pages?mode=create">New Page</a></li>
+								</ul>
+						</li>
+						<li><a href="http://120.114.62.31/admin/teams">Teams</a></li>
+						<li><a href="http://120.114.62.31/admin/scoreboard">Scoreboard</a></li>
+						<li><a href="http://120.114.62.31/admin/chals">Challenges</a></li>
+						<li><a href="http://120.114.62.31/admin/statistics">Statistics</a></li>
+						<li><a href="http://120.114.62.31/admin/config">Config</a></li>
+						<li>
+							<a href="http://120.114.62.31/admin/chals#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plugins <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+				
+	<div id="email-user" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<input type="hidden" value="e42088328aeefdb5805707ff3e9e8a53789db32a5423df77825672e6b46aff3e985527bfd3fa9612433ea315604a005f22a111a11ced303f336758557830944f" id="nonce">
+
+	<div id="create-challenge" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h3>New Challenge</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="update-modals-entry-div">
+	</div>
+
+	<div style="text-align:center">
+		<br>
+		<h1 class="text-center">Challenges</h1>
+		<a class="btn btn-theme btn-outlined create-challenge" href="http://120.114.62.31/admin/chal/new" role="button">New Challenge</a>
+		<div>
+			<table id="challenges"><tr id="1734436875"><td class="col-md-1"><h3>Level 4</h3></td><button class="chal-button col-md-2 theme-background" value="93"><h5>AIS3_Pre_exam_2016-Binary2</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="94"><h5>AIS3_Pre_exam_2015-Bin3</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="95"><h5>AIS3_Pre_exam_2016-Binary3</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button></tr><tr id="1734436874"><td class="col-md-1"><h3>Level 3</h3></td><button class="chal-button col-md-2 theme-background" value="91"><h5>AIS3_Pre_exam_2016-Binary1</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="92"><h5>AIS3_Pre_exam_2015-Bin2</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="122"><h5>陳廷宇_Equation</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="123"><h5>陳廷宇_TableNChair</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button></tr><tr id="1734436873"><td class="col-md-1"><h3>Level 2</h3></td><button class="chal-button col-md-2 theme-background" value="121"><h5>陳廷宇_XorZero</h5><p class="chal-points">100</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="124"><h5>陳廷宇_RedPeople</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="138"><h5>林思辰_base64</h5><p class="chal-points">100</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="139"><h5>林思辰_encrypt</h5><p class="chal-points">100</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="140"><h5>林思辰_mutate</h5><p class="chal-points">100</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="141"><h5>林思辰_encode</h5><p class="chal-points">100</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="142"><h5>林思辰_search</h5><p class="chal-points">100</p><span class="chal-percent">50% solved</span></button></tr><tr id="1734436872"><td class="col-md-1"><h3>Level 1</h3></td><button class="chal-button col-md-2 theme-background" value="2"><h5>Reverse</h5><p class="chal-points">50</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="120"><h5>陳廷宇_Baby_Assembly</h5><p class="chal-points">50</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="143"><h5>林思辰_find</h5><p class="chal-points">50</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="144"><h5>林思辰_read-asm</h5><p class="chal-points">50</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="145"><h5>林思辰_run-asm</h5><p class="chal-points">50</p><span class="chal-percent">50% solved</span></button></tr><tr id="1734436871"><td class="col-md-1"><h3>Level 0</h3></td><button class="chal-button col-md-2 theme-background" value="147"><h5>EasyCTF_hexedit</h5><p class="chal-points">25</p><span class="chal-percent">100% solved</span></button><button class="chal-button col-md-2 theme-background" value="148"><h5>EasyCTF_Hexable</h5><p class="chal-points">25</p><span class="chal-percent">100% solved</span></button><button class="chal-button col-md-2 theme-background" value="149"><h5>CSIE_strace</h5><p class="chal-points">25</p><span class="chal-percent">100% solved</span></button><button class="chal-button col-md-2 theme-background" value="150"><h5>EasyCTF_adder</h5><p class="chal-points">25</p><span class="chal-percent">100% solved</span></button><button class="chal-button col-md-2 theme-background" value="151"><h5>EasyCTF_liar</h5><p class="chal-points">25</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="152"><h5>EasyCTF_ezreverse</h5><p class="chal-points">25</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="153"><h5>EasyCTF_LuckyGuess</h5><p class="chal-points">25</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="154"><h5>picoCTF2017_Coffee</h5><p class="chal-points">25</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="155"><h5>NoConName2014_inBINcible</h5><p class="chal-points">25</p><span class="chal-percent">0% solved</span></button></tr></table>
+		</div>
+	</div>
+
+				<div class="navbar navbar-bottom footer">
+						<p class="text-muted text-center"><a style="text-decoration:none;" href="https://ctfd.io/"><sub>Powered by CTFd</sub></a></p><a style="text-decoration:none;" href="https://ctfd.io/">
+				</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+		</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+	</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+		<script src="./Reverse-CTF_files/jquery.min.js.下載"></script>
+		<script src="./Reverse-CTF_files/marked.min.js.下載"></script>
+		<script src="./Reverse-CTF_files/bootstrap.min.js.下載"></script>
+		<script src="./Reverse-CTF_files/main.js.下載"></script>
+		<script src="./Reverse-CTF_files/utils.js.下載"></script>
+		
+	<script src="./Reverse-CTF_files/utils.js.下載"></script>
+	<script src="./Reverse-CTF_files/chalboard.js.下載"></script>
+	<script src="./Reverse-CTF_files/multi-modal.js.下載"></script>
+
+
+
+</a></body></html>
