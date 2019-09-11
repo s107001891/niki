@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Admin Panel</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="http://120.114.62.36/themes/original/static/img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="http://120.114.62.36/themes/original/static/img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="./Crypto_files/bootstrap.min.css">
+		<link rel="stylesheet" href="./Crypto_files/font-awesome.min.css">
+		<link rel="stylesheet" href="./Crypto_files/style.css">
+		<link href="./Crypto_files/lato.css" rel="stylesheet" type="text/css">
+		<link href="./Crypto_files/raleway.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="./Crypto_files/style.css">
+		<script src="./Crypto_files/moment.min.js.下載"></script>
+		<script src="./Crypto_files/moment-timezone-with-data.min.js.下載"></script>
+		<script src="./Crypto_files/handlebars.min.js.下載"></script>
+		<script type="text/javascript">
+				var script_root = "";
+		</script>
+		
+<style>
+.btn-primary { background-color: #337ab7; }
+.btn-danger { background-color: #d9534f; }
+.col-md-4 { margin-bottom: 15px; }
+.key-remove-button { margin-top: 10px; }
+.delete-tag { color: white; margin-left: 3px; cursor: pointer; }
+</style>
+
+</head>
+
+<body>
+	<div class="body-container">
+		<div class="navbar navbar-inverse home">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="http://120.114.62.36/" class="navbar-brand">CTFd</a>
+				</div>
+				<div class="navbar-collapse collapse" aria-expanded="false" style="height: 0px">
+					<ul class="nav navbar-nav navbar-nav-right">
+						<li><a href="http://120.114.62.36/admin/graphs">Graphs</a></li>
+						<li>
+								<a href="http://120.114.62.36/admin/chals#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+										<li><a href="http://120.114.62.36/admin/pages">All Pages</a></li>
+										<li><a href="http://120.114.62.36/admin/pages?mode=create">New Page</a></li>
+								</ul>
+						</li>
+						<li><a href="http://120.114.62.36/admin/teams">Teams</a></li>
+						<li><a href="http://120.114.62.36/admin/scoreboard">Scoreboard</a></li>
+						<li><a href="http://120.114.62.36/admin/chals">Challenges</a></li>
+						<li><a href="http://120.114.62.36/admin/statistics">Statistics</a></li>
+						<li><a href="http://120.114.62.36/admin/config">Config</a></li>
+						<li>
+							<a href="http://120.114.62.36/admin/chals#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plugins <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+				
+	<div id="email-user" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<input type="hidden" value="c741965837d21454c6044b38e52783cef050c9c650025b95d4f0156ccb1017e5b098687e3e3eaf91341625adf28856650eaf445f7155cb798bc41a1730bd2dae" id="nonce">
+
+	<div id="create-challenge" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h3>New Challenge</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="update-modals-entry-div">
+	</div>
+
+	<div style="text-align:center">
+		<br>
+		<h1 class="text-center">Challenges</h1>
+		<a class="btn btn-theme btn-outlined create-challenge" href="http://120.114.62.36/admin/chal/new" role="button">New Challenge</a>
+		<div>
+			<table id="challenges"><tr id="1734436875"><td class="col-md-1"><h3>Level 4</h3></td><button class="chal-button col-md-2 theme-background" value="67"><h5>YANG_RSA-5</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="85"><h5>AIS3_Pre_exam_2016-Crypto3</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="136"><h5>OWO_Apple Shop</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="159"><h5>RSA 後門 (1)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="160"><h5>RSA 後門 (2)</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button></tr><tr id="1734436874"><td class="col-md-1"><h3>Level 3</h3></td><button class="chal-button col-md-2 theme-background" value="137"><h5>OWO_Nonsense-Machine</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="165"><h5>SECCON2017_Ps and Qs</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="168"><h5>rsa_known_p_high_bit</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="169"><h5>common_factor_attack_rsa</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="171"><h5>rsaHOT</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="172"><h5>RSAmixer</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button></tr><tr id="1734436873"><td class="col-md-1"><h3>Level 2</h3></td><button class="chal-button col-md-2 theme-background" value="66"><h5>YANG_RSA-4</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="84"><h5>AIS3_Pre_exam_2015-Crypto2</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="161"><h5>babyDSA</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="162"><h5>babyDSA_Part2</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="163"><h5>babyDSA_Part3</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="164"><h5>babyDSA_Part4</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="170"><h5>ElGamal_reuse_k</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="175"><h5>BasicSmooth</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="177"><h5>CBC</h5><p class="chal-points">100</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="178"><h5>ECB</h5><p class="chal-points">100</p><span class="chal-percent">50% solved</span></button></tr><tr id="1734436872"><td class="col-md-1"><h3>Level 1</h3></td><button class="chal-button col-md-2 theme-background" value="4"><h5>Caesar cipher</h5><p class="chal-points">50</p><span class="chal-percent">50% solved</span></button><button class="chal-button col-md-2 theme-background" value="62"><h5>Xor</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="63"><h5>YANG_RSA-1</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="64"><h5>YANG_RSA-2</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="65"><h5>YANG_RSA-3</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="83"><h5>AIS3_Pre_exam_2016-Crypto1</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="166"><h5>Simplest_ECC</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="174"><h5>babyRSA</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="176"><h5>xor-magic</h5><p class="chal-points">50</p><span class="chal-percent">50% solved</span></button></tr><tr id="2027150561"><td class="col-md-1"><h3>Crypto</h3></td><button class="chal-button col-md-2 theme-background" value="179"><h5>100-mama</h5><p class="chal-points">20</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="180"><h5>200-secureSub</h5><p class="chal-points">20</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="181"><h5>300-xorlnarmoni'akda</h5><p class="chal-points">20</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="182"><h5>crypto-primitive</h5><p class="chal-points">20</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="183"><h5>bb8</h5><p class="chal-points">20</p><span class="chal-percent">0% solved</span></button></tr></table>
+		</div>
+	</div>
+
+				<div class="navbar navbar-bottom footer">
+						<p class="text-muted text-center"><a style="text-decoration:none;" href="https://ctfd.io/"><sub>Powered by CTFd</sub></a></p><a style="text-decoration:none;" href="https://ctfd.io/">
+				</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+		</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+	</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+		<script src="./Crypto_files/jquery.min.js.下載"></script>
+		<script src="./Crypto_files/marked.min.js.下載"></script>
+		<script src="./Crypto_files/bootstrap.min.js.下載"></script>
+		<script src="./Crypto_files/main.js.下載"></script>
+		<script src="./Crypto_files/utils.js.下載"></script>
+		
+	<script src="./Crypto_files/utils.js.下載"></script>
+	<script src="./Crypto_files/chalboard.js.下載"></script>
+	<script src="./Crypto_files/multi-modal.js.下載"></script>
+
+
+
+</a></body></html>
