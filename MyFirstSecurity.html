@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Admin Panel</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="http://120.114.62.72/themes/original/static/img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="http://120.114.62.72/themes/original/static/img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="./MyFirstSecurity_files/bootstrap.min.css">
+		<link rel="stylesheet" href="./MyFirstSecurity_files/font-awesome.min.css">
+		<link rel="stylesheet" href="./MyFirstSecurity_files/style.css">
+		<link href="./MyFirstSecurity_files/lato.css" rel="stylesheet" type="text/css">
+		<link href="./MyFirstSecurity_files/raleway.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="./MyFirstSecurity_files/style.css">
+		<script src="./MyFirstSecurity_files/moment.min.js.下載"></script>
+		<script src="./MyFirstSecurity_files/moment-timezone-with-data.min.js.下載"></script>
+		<script src="./MyFirstSecurity_files/handlebars.min.js.下載"></script>
+		<script type="text/javascript">
+				var script_root = "";
+		</script>
+		
+<style>
+.btn-primary { background-color: #337ab7; }
+.btn-danger { background-color: #d9534f; }
+.col-md-4 { margin-bottom: 15px; }
+.key-remove-button { margin-top: 10px; }
+.delete-tag { color: white; margin-left: 3px; cursor: pointer; }
+</style>
+
+</head>
+
+<body>
+	<div class="body-container">
+		<div class="navbar navbar-inverse home">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="http://120.114.62.72/" class="navbar-brand">CTFd</a>
+				</div>
+				<div class="navbar-collapse collapse" aria-expanded="false" style="height: 0px">
+					<ul class="nav navbar-nav navbar-nav-right">
+						<li><a href="http://120.114.62.72/admin/graphs">Graphs</a></li>
+						<li>
+								<a href="http://120.114.62.72/admin/chals#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+										<li><a href="http://120.114.62.72/admin/pages">All Pages</a></li>
+										<li><a href="http://120.114.62.72/admin/pages?mode=create">New Page</a></li>
+								</ul>
+						</li>
+						<li><a href="http://120.114.62.72/admin/teams">Teams</a></li>
+						<li><a href="http://120.114.62.72/admin/scoreboard">Scoreboard</a></li>
+						<li><a href="http://120.114.62.72/admin/chals">Challenges</a></li>
+						<li><a href="http://120.114.62.72/admin/statistics">Statistics</a></li>
+						<li><a href="http://120.114.62.72/admin/config">Config</a></li>
+						<li>
+							<a href="http://120.114.62.72/admin/chals#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plugins <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+				
+	<div id="email-user" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<input type="hidden" value="a59cec509b3e52c5967a17037aff34452b983df6e90c4c25c845eda807fc4390c9e89beb202ad7705ac8de77c98dc91cc022630abab123223cd057cb98a8756c" id="nonce">
+
+	<div id="create-challenge" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h3>New Challenge</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="update-modals-entry-div">
+	</div>
+
+	<div style="text-align:center">
+		<br>
+		<h1 class="text-center">Challenges</h1>
+		<a class="btn btn-theme btn-outlined create-challenge" href="http://120.114.62.72/admin/chal/new" role="button">New Challenge</a>
+		<div>
+			<table id="challenges"><tr id="1515186469"><td class="col-md-1"><h3>Network102</h3></td><button class="chal-button col-md-2 theme-background" value="157"><h5>CSAW Quals CTF 2013: Networking 2</h5><p class="chal-points">30</p><span class="chal-percent">18% solved</span></button><button class="chal-button col-md-2 theme-background" value="158"><h5>google-ctf-2016:Network Forensic</h5><p class="chal-points">40</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="159"><h5>picoCTF 2017 : digital-camouflage-50</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="161"><h5>BITSCTF 2017 : ghost-in-the-machine-60</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="163"><h5>Insomni'hack Teaser 2017 : {the-great-escape-part1-50}</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="165"><h5> ASIS CTF Finals 2016 : sky-blue-73(Bluetooth traffic)</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="162"><h5>PicoCTF 2013: Second Contact</h5><p class="chal-points">185</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="166"><h5>33c3 CTF : exfil-100</h5><p class="chal-points">200</p><span class="chal-percent">0% solved</span></button></tr><tr id="-692737678"><td class="col-md-1"><h3>Crypto102</h3></td><button class="chal-button col-md-2 theme-background" value="130"><h5>angstromCTF 2016 : artifact-20</h5><p class="chal-points">20</p><span class="chal-percent">18% solved</span></button><button class="chal-button col-md-2 theme-background" value="143"><h5>Vigenère cipher</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="102"><h5>School CTF 2015: affine-cipher-100(教)</h5><p class="chal-points">150</p><span class="chal-percent">0% solved</span></button></tr><tr id="1515186468"><td class="col-md-1"><h3>Network101</h3></td><button class="chal-button col-md-2 theme-background" value="154"><h5>BITSCTF 2017 : woodstock-1-10</h5><p class="chal-points">10</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="155"><h5>CSAW Quals CTF 2013: Networking 1</h5><p class="chal-points">30</p><span class="chal-percent">9% solved</span></button><button class="chal-button col-md-2 theme-background" value="160"><h5>PicoCTF_2017: Special Agent User(MUST)</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="156"><h5>Internetwache-CTF-2016:Network Forensic(MUST)</h5><p class="chal-points">80</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="164"><h5>hitcon-2017:Data &amp; Mining</h5><p class="chal-points">137</p><span class="chal-percent">0% solved</span></button></tr><tr id="-1707987394"><td class="col-md-1"><h3>Web101</h3></td><button class="chal-button col-md-2 theme-background" value="144"><h5>Web-1:source code</h5><p class="chal-points">20</p><span class="chal-percent">45% solved</span></button><button class="chal-button col-md-2 theme-background" value="145"><h5>web-2:Robots.txt</h5><p class="chal-points">30</p><span class="chal-percent">36% solved</span></button><button class="chal-button col-md-2 theme-background" value="146"><h5>web-3:Curl-1</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="147"><h5>web-4:HTTP method</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="149"><h5>Web-6:Burp Suite</h5><p class="chal-points">110</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="150"><h5>web-7:Burp Suite-2</h5><p class="chal-points">120</p><span class="chal-percent">0% solved</span></button></tr><tr id="1916423962"><td class="col-md-1"><h3>隱寫術102</h3></td><button class="chal-button col-md-2 theme-background" value="98"><h5>BITSCTF 2017 : black-hole-10</h5><p class="chal-points">20</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="101"><h5>BITSCTF 2017 : flagception-30</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="120"><h5>CSAW QUALS 2015: keep-calm-and-ctf(必)</h5><p class="chal-points">50</p><span class="chal-percent">9% solved</span></button><button class="chal-button col-md-2 theme-background" value="122"><h5>ABCTF 2016 : gz-30</h5><p class="chal-points">60</p><span class="chal-percent">9% solved</span></button><button class="chal-button col-md-2 theme-background" value="123"><h5>ABCTF 2016 : best-ganondorf-50</h5><p class="chal-points">60</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="139"><h5>steg_3:Embedded secret</h5><p class="chal-points">60</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="140"><h5>Steg_Secret@PDF</h5><p class="chal-points">80</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="141"><h5>Steg_secret@ZIP</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button></tr><tr id="622986655"><td class="col-md-1"><h3>編碼102</h3></td><button class="chal-button col-md-2 theme-background" value="92"><h5>angstromCTF 2016 : what-the-hex</h5><p class="chal-points">20</p><span class="chal-percent">18% solved</span></button><button class="chal-button col-md-2 theme-background" value="88"><h5>Internetwache CTF 2016: The hidden message</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="94"><h5>alexctf-2017: CR1: Ultracoded</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="91"><h5>SECCON CTF 2014: Easy Cipher</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="93"><h5>qiwi_infosec_ctf_2016_crypto_100</h5><p class="chal-points">100</p><span class="chal-percent">0% solved</span></button></tr><tr id="-1707987393"><td class="col-md-1"><h3>Web102</h3></td><button class="chal-button col-md-2 theme-background" value="148"><h5>web-5:Local File Inclusion</h5><p class="chal-points">80</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="151"><h5>SQL injection</h5><p class="chal-points">80</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="152"><h5>XSS</h5><p class="chal-points">80</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="153"><h5>Download</h5><p class="chal-points">80</p><span class="chal-percent">0% solved</span></button></tr><tr id="-692737679"><td class="col-md-1"><h3>Crypto101</h3></td><button class="chal-button col-md-2 theme-background" value="4"><h5>ABCTF 2016 : ceasar-salad-10</h5><p class="chal-points">10</p><span class="chal-percent">18% solved</span></button><button class="chal-button col-md-2 theme-background" value="129"><h5>angstromCTF 2017:The Beginning</h5><p class="chal-points">10</p><span class="chal-percent">9% solved</span></button><button class="chal-button col-md-2 theme-background" value="95"><h5>RC3 CTF 2016 : salad-100</h5><p class="chal-points">20</p><span class="chal-percent">9% solved</span></button><button class="chal-button col-md-2 theme-background" value="133"><h5>EasyCTF-2014:A Simple Cipher</h5><p class="chal-points">20</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="90"><h5>AlexCTF2017: Fore1-Hit_the_core</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="96"><h5>EKOPARTY CTF 2015: SCYTCRYPTO</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="97"><h5>Pico CTF 2014 : Substitution</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="128"><h5> angstromCTF 2017: Substitution Cipher</h5><p class="chal-points">60</p><span class="chal-percent">0% solved</span></button></tr><tr id="1916423961"><td class="col-md-1"><h3>隱寫術101</h3></td><button class="chal-button col-md-2 theme-background" value="5"><h5>STEG(必)</h5><p class="chal-points">20</p><span class="chal-percent">36% solved</span></button><button class="chal-button col-md-2 theme-background" value="83"><h5>sCTF 2016 Q1 : banana-boy-20(必)</h5><p class="chal-points">50</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="100"><h5>CSAW Quals CTF 2013: Black &amp; White</h5><p class="chal-points">50</p><span class="chal-percent">9% solved</span></button><button class="chal-button col-md-2 theme-background" value="121"><h5>ABCTF 2016 : just-open-it(必)</h5><p class="chal-points">50</p><span class="chal-percent">9% solved</span></button></tr><tr id="622986654"><td class="col-md-1"><h3>編碼101</h3></td><button class="chal-button col-md-2 theme-background" value="3"><h5>Base64</h5><p class="chal-points">20</p><span class="chal-percent">36% solved</span></button><button class="chal-button col-md-2 theme-background" value="58"><h5>Ascii</h5><p class="chal-points">20</p><span class="chal-percent">18% solved</span></button><button class="chal-button col-md-2 theme-background" value="59"><h5>Base32</h5><p class="chal-points">20</p><span class="chal-percent">27% solved</span></button><button class="chal-button col-md-2 theme-background" value="89"><h5>Morse code</h5><p class="chal-points">20</p><span class="chal-percent">27% solved</span></button></tr><tr id="686885242"><td class="col-md-1"><h3>Linux 102</h3></td><button class="chal-button col-md-2 theme-background" value="47"><h5>Linux CTF 6</h5><p class="chal-points">10</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="48"><h5>Linux CTF 7</h5><p class="chal-points">10</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="49"><h5>Linux CTF 8</h5><p class="chal-points">10</p><span class="chal-percent">9% solved</span></button><button class="chal-button col-md-2 theme-background" value="50"><h5>Linux CTF 9</h5><p class="chal-points">10</p><span class="chal-percent">0% solved</span></button><button class="chal-button col-md-2 theme-background" value="51"><h5>Linux CTF 10</h5><p class="chal-points">10</p><span class="chal-percent">0% solved</span></button></tr><tr id="686885241"><td class="col-md-1"><h3>Linux 101</h3></td><button class="chal-button col-md-2 theme-background" value="26"><h5>Linux CTF 1</h5><p class="chal-points">10</p><span class="chal-percent">91% solved</span></button><button class="chal-button col-md-2 theme-background" value="41"><h5>Linux CTF 2</h5><p class="chal-points">10</p><span class="chal-percent">91% solved</span></button><button class="chal-button col-md-2 theme-background" value="42"><h5>Linux CTF 3</h5><p class="chal-points">10</p><span class="chal-percent">55% solved</span></button><button class="chal-button col-md-2 theme-background" value="43"><h5>Linux CTF 4</h5><p class="chal-points">10</p><span class="chal-percent">45% solved</span></button><button class="chal-button col-md-2 theme-background" value="46"><h5>Linux CTF 5</h5><p class="chal-points">10</p><span class="chal-percent">27% solved</span></button></tr></table>
+		</div>
+	</div>
+
+				<div class="navbar navbar-bottom footer">
+						<p class="text-muted text-center"><a style="text-decoration:none;" href="https://ctfd.io/"><sub>Powered by CTFd</sub></a></p><a style="text-decoration:none;" href="https://ctfd.io/">
+				</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+		</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+	</a></div><a style="text-decoration:none;" href="https://ctfd.io/">
+		<script src="./MyFirstSecurity_files/jquery.min.js.下載"></script>
+		<script src="./MyFirstSecurity_files/marked.min.js.下載"></script>
+		<script src="./MyFirstSecurity_files/bootstrap.min.js.下載"></script>
+		<script src="./MyFirstSecurity_files/main.js.下載"></script>
+		<script src="./MyFirstSecurity_files/utils.js.下載"></script>
+		
+	<script src="./MyFirstSecurity_files/utils.js.下載"></script>
+	<script src="./MyFirstSecurity_files/chalboard.js.下載"></script>
+	<script src="./MyFirstSecurity_files/multi-modal.js.下載"></script>
+
+
+
+</a></body></html>
